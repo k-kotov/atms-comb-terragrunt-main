@@ -5,20 +5,19 @@
 variable "client" {
   description = "The client for which the resources are created"
   type        = string
+default     = "123"
 }
 
 variable "environment" {
   description = "The environment in which the resources are created"
   type        = string
-  validation {
-    condition     = contains(["dev", "qa", "stg", "prg"], var.environment)
-    error_message = "The environment value must be one of 'dev', 'qa', 'stg', 'prd'."
-  }
+default     = "55555"
 }
 
 variable "project" {
   description = "The project for which the resources are created"
   type        = string
+default     = "123"
 }
 
 ############################################################
@@ -52,7 +51,7 @@ variable "enable_dhcp_options" {
 variable "dhcp_options_domain_name" {
   description = "Specifies DNS name for DHCP options set (requires enable_dhcp_options set to true)"
   type        = string
-  default     = ""
+  default     = "name"
 }
 
 variable "dhcp_options_domain_name_servers" {
