@@ -1,11 +1,13 @@
 variable "name_prefix" {
   description = "The prefix to apply to all resources in this module"
   type        = string
+default = "kostya"
 }
 
 variable "client" {
   description = "The client for which the resources are created"
   type        = string
+default = "kostya"
 }
 
 resource "twingate_remote_network" "this" {
